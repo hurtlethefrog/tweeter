@@ -27,6 +27,11 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+  
+    <!-- Counter JS -->
+  
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -53,7 +58,7 @@
             <form action="/tweets" method="POST">
             <input type="text" name="text" class="question" id="nme" required autocomplete="off" placeholder="What are you humming about?"/>
             <input id="tweetBtn" type="submit" value="Tweet" />
-            <span class="counter">140</span>
+            <span name="charCounter"class="counter">140</span>
           </form>
           </section>
     </main>

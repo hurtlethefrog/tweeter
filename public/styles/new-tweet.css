@@ -16,6 +16,11 @@
   background-color:  hsl(0, 0%, 80%);
 }
 
+.invalid {
+  color: red;
+  font-weight: bold;
+}
+
 
 /*
 taken from https://codepen.io/atunnecliffe/pen/gpKzQw

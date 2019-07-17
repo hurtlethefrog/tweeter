@@ -1,19 +1,23 @@
 .counter {
   position: absolute;
-  right: 7px;
-  top: -6px;
-  font-size: 30px
+  right: 9px;
+  top: -10px;
+  font-size: 30px;
 }
 
 #tweetBtn {
   background-color: #4056A1;
   color: #ffff;
   font-family: "bungee", sans-serif;
+  border-radius: 14px;
+
 }
 
 .box {
   position: relative;
   background-color:  hsl(0, 0%, 80%);
+  border-radius: 14px;
+
 }
 
 .invalid {

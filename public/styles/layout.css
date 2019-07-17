@@ -1,8 +1,8 @@
 /*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+* https://css-tricks.com/international-box-sizing-awareness-day/
+* Do not modify these two selectors, please
+*/
 html {
   box-sizing: border-box;
 }
@@ -11,8 +11,8 @@ html {
 }
 
 /*
- * Global layout stuff
- */
+* Global layout stuff
+*/
 
 body {
   color: #545149;
@@ -22,36 +22,42 @@ body {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
 
- .container {
-   text-align: center;
-   color: #545149;
-   padding: 5%;
-   margin-top: 103px;
- }
+.container {
+  text-align: center;
+  color: #545149;
+  padding: 5%;
+  margin-top: 103px;
+}
 
- .tweetContainer:hover {
+.tweetContainer:hover .hovered {
+  transition: all 0s ease;
+  font-weight: bold;
+
+}
+
+.tweetContainer:hover {
+  transition: border 1s ease;
   border: solid;
   margin: 10px;
-  color: #545149
- }
+}
 
- .timeStamp {
-  text-align: left;
+.timeStamp {
   font-size: .5em;
   margin: auto;
   margin-left: 10px;
   inline-size: fit-content;
   float: left;
+  text-align: left;
 }
 
 .theTweet {
-  border-bottom-style: solid;
   border-bottom-width: medium;
   text-align: left;
   padding: 0px 15px 10px 15px;
+  border-bottom-style: solid;
 }
 
 .buttons {
@@ -59,19 +65,14 @@ body {
   font-size: .5em;
 }
 
-.hovered:hover {
-  font-weight: bold;
-
-}
-
 .account {
-  inline-size: fit-content;
   float: left;
+  inline-size: fit-content;
 }
 
 .userHandle {
-  text-align: right;
   font-weight: 200;
+  text-align: right;
 }
 
 .transparent {
@@ -80,6 +81,7 @@ body {
 
 .shadow:hover {
   box-shadow: 5px 3px 14px;
+  transition: all 1s ease;
 }
 
 .clear {
@@ -88,4 +90,4 @@ body {
 
 .tweetContainer:hover .userHandle{
   color: #545149
- }
+}

@@ -40,12 +40,12 @@ const data = [
   
   const createTweetElement = function(tweet) {
     const $tweetContainer = 
-      $('<section>').addClass('tweetContainer shadow hovered').append([
+      $('<section>').addClass('tweetContainer shadow').append([
       $('<span>').addClass('account').prepend(`<img src=${tweet.user.avatars} />`),
-      $('<span>').addClass('account').text(tweet.user.name),
+      $('<span>').addClass('account hovered').text(tweet.user.name),
       $('<span>').addClass('userHandle transparent').text(tweet.user.handle),
       $('<span>').addClass('clear'),
-      $('<span>').addClass('theTweet').text(tweet.content.text),
+      $('<span>').addClass('theTweet hovered').text(tweet.content.text),
       $('<span>').addClass('timeStamp').text(tweet.created_at),
       $('<span>').addClass('buttons').text('❤️🚩️🔁️')
     ]);

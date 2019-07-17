@@ -1,9 +1,8 @@
 const renderTweets = function(tweets) {
   $.each(tweets, (index, tweet) => {
-    $('.container').append(createTweetElement(tweet))
-  });  
-}
-  
+    $('.container').append(createTweetElement(tweet));  
+  })
+}  
 const createTweetElement = function(tweet) {
   const $tweetContainer = 
     $('<section>').addClass('tweetContainer shadow').append([
@@ -23,9 +22,26 @@ const loadTweets = function() {
   $.get("/tweets")
   .then(tweets => renderTweets(tweets))
   .fail(error => console.log(error))
+}
 
-  }
+const lastTweet = function() {
+  $.get("/tweets")
+  .then(tweets => renderTweets([tweets[tweets.length - 1]]))
+  .fail(error => console.log(error))
 
-$(document).ready(function(){
+}
+
+$(document).ready(function() {
   loadTweets();
-})  
+  $('.box.new-tweet form').on('submit', function(event) {
+    event.preventDefault();
+    const $tweet = $(this).serialize(); 
+    if ($tweet.length < 140) {
+      $.post('/tweets', $tweet)
+        .then(lastTweet)
+    } else {
+      alert('too long')
+    }
+  })
+})
+

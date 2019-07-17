@@ -25,6 +25,10 @@
   font-weight: bold;
 }
 
+#tweetBtn.invalidBtn {
+  display: none;
+}
+
 
 /*
 taken from https://codepen.io/atunnecliffe/pen/gpKzQw
@@ -137,8 +141,8 @@ input[type="submit"]:active {
 }
 
 input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[type="submit"] {
-  -webkit-animation: appear 1s forwards;
-  animation: appear 1s forwards;
+  -webkit-animation: appear 1s forwards; 
+ animation: appear 1s forwards;
 }
 
 input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input[type="submit"] {

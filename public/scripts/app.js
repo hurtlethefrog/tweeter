@@ -43,6 +43,7 @@ const data = [
       $('<section>').addClass('tweetContainer shadow hovered').append([
       $('<span>').addClass('account').prepend(`<img src=${tweet.user.avatars} />`),
       $('<span>').addClass('account').text(tweet.user.name),
+      $('<span>').addClass('userHandle transparent').text(tweet.user.handle),
       $('<span>').addClass('clear'),
       $('<span>').addClass('theTweet').text(tweet.content.text),
       $('<span>').addClass('timeStamp').text(tweet.created_at),

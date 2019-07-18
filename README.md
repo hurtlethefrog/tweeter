@@ -21,7 +21,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
--![]()
--![]()
--![]()
--![]()
+-![A home page that leaves you wanting more](https://github.com/hurtlethefrog/tweeter/blob/master/docs/Flawless-home-page.png)
+-![An input field that knows when it's wanted](https://github.com/hurtlethefrog/tweeter/blob/master/docs/Hideable-input-field.png)
+-![Useable on desktop and phone alike, W0W!](https://github.com/hurtlethefrog/tweeter/blob/master/docs/Ingenious-esponsive-design.png)
+-![Error messages custom designed for every problem](https://github.com/hurtlethefrog/tweeter/blob/master/docs/Relevant-error-messages.png)

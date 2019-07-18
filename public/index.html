@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Allow Mobile To Use Proper Design -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -19,22 +22,12 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- Nav-bar CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     
-  
-    <!-- Counter JS -->  
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-    <!-- Submit Tweet JS -->
-
-    <script type="text/javascript" src="/scripts/submit-tweet.js"></script>
 
   </head>
 
@@ -43,6 +36,7 @@
     <!-- Top nav bar (fixed) -->
     <div class="navbar">
       <span id="logo">TWEETER</span>
+      <input id="openTextBtn" type="button" value="Write a new Tweet">
     </div>
 
     <!-- Page-specific (main) content here -->
@@ -58,14 +52,16 @@
   </header>
 
     
-    <main class="container">Aw geez do I love tweetering, it's my fav. Whoever designed this site should be given alot of money really fast. If we don't move quick someone else will surely buy him out. 
+    <main class="container">
+      <span id="error">This is a big error message, don't so that!</span>
       <section class="box new-tweet">
         <form action="/tweets" method="POST">
-          <input type="text" name="text" class="question" id="nme" required autocomplete="off" placeholder="What are you humming about?"/>
+          <input type="text" name="text" class="question" required autocomplete="off" placeholder="What are you humming about?"/>
           <input id="tweetBtn" type="submit" value="Tweet" />
           <span name="charCounter"class="counter">140</span>
         </form>
       </section>
+      <div id="tweetHead"></div>
       <section class="tweetContainer shadow">
       </section>
     </main>
